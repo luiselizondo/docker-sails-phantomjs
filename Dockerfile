@@ -17,11 +17,10 @@ RUN apt-get install -y \
 	make \
 	build-essential \
 	gcc \
-	ca-certificates \
-	wget
+	ca-certificates
 
 RUN cd /tmp ; \
-	wget http://download.gna.org/wkhtmltopdf/0.12/0.12.2.1/wkhtmltox-0.12.2.1_linux-trusty-amd64.deb ; \
+	curl -O http://download.gna.org/wkhtmltopdf/0.12/0.12.2.1/wkhtmltox-0.12.2.1_linux-trusty-amd64.deb ; \
 	dpkg -i wkhtmltox-0.12.2.1_linux-trusty-amd64.deb ; \
 	rm /tmp/wkhtmltox-0.12.2.1_linux-trusty-amd64.deb
 
