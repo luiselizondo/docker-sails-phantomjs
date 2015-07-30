@@ -17,7 +17,9 @@ RUN apt-get install -y \
 	make \
 	build-essential \
 	gcc \
-	ca-certificates
+	ca-certificates \
+	xfonts-base \
+	xfonts-75dpi
 
 RUN cd /tmp ; \
 	curl -O http://download.gna.org/wkhtmltopdf/0.12/0.12.2.1/wkhtmltox-0.12.2.1_linux-trusty-amd64.deb ; \
