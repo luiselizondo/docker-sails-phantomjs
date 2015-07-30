@@ -7,7 +7,18 @@ RUN apt-get update
 RUN apt-get update --fix-missing
 RUN apt-get install -y curl
 RUN curl -sL https://deb.nodesource.com/setup | sudo bash -
-RUN apt-get install -y supervisor python nodejs imagemagick git openssl make build-essential gcc ca-certificates
+RUN apt-get install -y \
+	supervisor \
+	python \
+	nodejs \
+	imagemagick \
+	git \
+	openssl \
+	make \
+	build-essential \
+	gcc \
+	ca-certificates \
+	wget
 
 RUN cd /tmp ; \
 	wget http://download.gna.org/wkhtmltopdf/0.12/0.12.2.1/wkhtmltox-0.12.2.1_linux-trusty-amd64.deb ; \
